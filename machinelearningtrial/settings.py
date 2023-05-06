@@ -28,7 +28,7 @@ SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["bikerentalml.azurewebsites.net"]
 
 
 # Application definition
@@ -123,7 +123,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join(PROJECT_ROOT, "static")
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -131,3 +131,5 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, "static")
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+DOMAINS = ["bikerentalml.azurewebsites.net"]

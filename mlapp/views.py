@@ -18,7 +18,7 @@ def ShowView(request, result):
 
 
 def CalculateView(request):
-    print(request.POST
+    print(request.POST)
     form_data = request.POST
     mydict = {
         "day": int(form_data["date_day"]),
