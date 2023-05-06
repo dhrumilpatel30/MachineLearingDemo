@@ -28,8 +28,8 @@ SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["bikerentalml.azurewebsites.net"]
-
+ALLOWED_HOSTS = ["bikerentalml.azurewebsites.net", "localhost"]
+CSRF_TRUSTED_ORIGINS = ["https://bikerentalml.azurewebsites.net"]
 
 # Application definition
 

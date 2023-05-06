@@ -10,13 +10,6 @@ def HomeView(request):
     return render(request, "home.html", {"form": form})
 
 
-def ShowView(request, result):
-    print(type(result))
-    result1 = bytes.decode(result)
-    print(type(result1))
-    return render(request, "show.html", {"result": result1[13:25]})
-
-
 def CalculateView(request):
     print(request.POST)
     form_data = request.POST
@@ -35,4 +28,7 @@ def CalculateView(request):
         "windspeed": float(form_data["windspeed"]) * 0.01,
     }
     result = Calculate(mydict)
-    return ShowView(request, result)
+    print(type(result))
+    result1 = bytes.decode(result)
+    print(type(result1))
+    return render(request, "show.html", {"result": result1[13:25]})

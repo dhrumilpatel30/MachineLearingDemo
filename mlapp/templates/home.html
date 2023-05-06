@@ -20,7 +20,6 @@
         {% endfor %}
         <form action='{% url 'calculate' %}' method='post'>
             {% csrf_token %}
-            {{ form.non_field_errors }}
             {{form|crispy}}
             <button type="submit" class="btn btn-dark w-100">Calculate Result</button>
         </form>
